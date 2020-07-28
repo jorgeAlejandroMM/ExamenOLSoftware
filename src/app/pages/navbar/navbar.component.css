@@ -1,0 +1,71 @@
+/* 
+.colomain{
+    background: rgba(183,222,237,1);
+background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 4%, rgba(113,206,239,1) 22%, rgba(33,180,226,1) 48%, rgba(32,124,229,1) 98%, rgba(32,124,229,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(4%, rgba(183,222,237,1)), color-stop(22%, rgba(113,206,239,1)), color-stop(48%, rgba(33,180,226,1)), color-stop(98%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
+background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 4%, rgba(113,206,239,1) 22%, rgba(33,180,226,1) 48%, rgba(32,124,229,1) 98%, rgba(32,124,229,1) 100%);
+background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 4%, rgba(113,206,239,1) 22%, rgba(33,180,226,1) 48%, rgba(32,124,229,1) 98%, rgba(32,124,229,1) 100%);
+background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 4%, rgba(113,206,239,1) 22%, rgba(33,180,226,1) 48%, rgba(32,124,229,1) 98%, rgba(32,124,229,1) 100%);
+background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(183,222,237,1) 4%, rgba(113,206,239,1) 22%, rgba(33,180,226,1) 48%, rgba(32,124,229,1) 98%, rgba(32,124,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#207ce5', GradientType=0 );
+
+
+} */
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+ 
+#sidebar-wrapper {
+ 
+  min-height: 100vh;
+  margin-left: -5rem;
+  -webkit-transition: margin .20s ease-out;
+  -moz-transition: margin .20s ease-out;
+  -o-transition: margin .20s ease-out;
+  transition: margin .20s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 0.5rem;
+}
+
+#sidebar-wrapper .list-group {
+  
+  width: 5rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+    
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+    
+  }
+}

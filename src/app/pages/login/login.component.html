@@ -1,0 +1,55 @@
+
+<div id="body">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+            <div class="d-flex justify-content-end  mb-3">
+                <div class="p-2 ">
+
+                    <div class="wrapper fadeInDown">
+                        <div id="formContent">
+                      
+                          <div class="fadeIn first">
+                            <h3>Inicio de  sesion</h3>
+                          </div>
+                      <br>
+                          <form action="" [formGroup]="formGroup" (ngSubmit)="ValidarFormLogin()">
+                    
+                            
+                                <input class="mb-4" id="login" class="fadeIn second"
+                                type="text"  
+                                formControlName="correo" 
+                                [(ngModel)]="usuario.correo" 
+                                name="correo" 
+                                placeholder="ejemploejemplo.com">
+                             <small *ngIf="ValidarCorreo">
+                                 <span class="text-danger">Debe cumplir las caracteristicas de un correo</span>
+                                </small>
+                           
+                                <input type="text"   id="password" class="fadeIn third"
+                                formControlName="password" 
+                                [(ngModel)]="usuario.Password"
+                                 name="password" 
+                                 placeholder="1234"> 
+                                <small *ngIf="ValidarPassword"><span class="text-danger">Deben Tener min 3 digitos</span></small>
+                               <br>
+                               
+                            <button type="submit" class="btn btn-primary btn-lg btn-block fadeIn fourth" >Login</button> 
+                    
+                        </form>
+                      
+                          <div id="formFooter">
+                            <a class="underlineHover" href="#">Forgot Password?</a>
+                          </div>
+                      
+                        </div>
+                    </div> 
+                   
+                </div>
+                
+              </div>
+		</div>
+	</div>
+</div>
+
+</div>

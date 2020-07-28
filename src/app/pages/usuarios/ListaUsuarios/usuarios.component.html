@@ -1,0 +1,145 @@
+
+<div class="container-fluid " id="container">
+	<div class="row ">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-10">
+
+          <div class="d-flex justify-content-between  mb-3">
+            <div class="p-2 ">
+               <h3 class="text-primary" ><span  class="fa fa-users "  aria-hidden="true"></span>Usuarios existentes.</h3>
+            </div>
+            <div class="p-2 ">
+              <button type="button" id="btnCreateUser" aria-hidden="true"    class=" btn btn-primary btn-sm " 
+              (click)="editarUsuario()">Crear
+            </button></div>
+          </div>
+          
+<br>
+<div class="table-responsive">
+  <table class="table-sm table-bordered" >
+      <thead>
+  
+          <tr>
+          <th>  # </th>
+          <th>  Nombre</th>
+          <th>  Apellido</th>
+          <th>  Identificacion(C.C)</th>
+          <th>  Rol Asociado </th>
+          <th>  Estado </th>
+          <th>  Telefono </th>
+          <th> Correo </th>
+          <!-- <th>  Foto </th> -->
+          <th> Accion </th>
+          </tr>
+  
+      </thead>
+      <tbody>
+  
+    <tr *ngFor="let usuario of ListaUsuarios| 
+    filter:SearchNom |
+    filter:SearchApe |
+    filter:SearchId  |
+    filter:SearchRol |
+    filter:SearchStatus |
+    filter:SearchTel |
+    filter:SearchEmail ;
+     let i=index">
+    
+      <td>{{i+1}}</td>
+      <td>{{usuario.nombre}}</td>
+      <td>{{usuario.apellido}}</td>
+      <td>{{usuario.id}}</td>
+      <td>{{usuario.rol}}</td>
+      <td>{{usuario.estado}}</td>
+      <td>{{usuario.telefono}}</td>
+      <td>{{usuario.correo}}</td>
+      <!-- <td> <div class="thumbnail"><img src={{usuario.foto}} width="50" class=" rounded-circle "  alt=""></div></td> -->
+      <td>
+        <button type="button"  aria-hidden="true"   class="btn btn-light btn-xs fa fa-pencil" (click)="editarUsuario(usuario)"></button>
+        <button type="button" aria-hidden="true"  class="btn btn-light btn-xs fa fa-trash" (click)="eliminarUsuario(usuario)"></button>
+      </td>
+    </tr>
+
+      <app-editar (hide)="visible=false" *ngIf="visible"></app-editar>
+    </table>
+  </div>
+        </div>
+          <!--  -->
+				<div class="col-md-2">
+            <div class="row">
+
+<h3 class="text-primary"><span  class="fa fa-user" aria-hidden="true"></span>Filtrar busqueda</h3>
+            <div class="col-md-12">
+              <label for="inputAddress">Nombre</label>
+                 <input type="text" class="form-control" name="term" [(ngModel)]="SearchNom">
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Apellido</label>
+                <input type="text" class="form-control" name="termd" [(ngModel)]="SearchApe">
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Identificacion(C.C)</label>
+            <input type="text" class="form-control" name="ter" [(ngModel)]="SearchId">
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Estado</label>
+            <select name="estado"  class="form-control" [(ngModel)]="SearchStatus" >
+                <option *ngFor="let item of estadoUser" [value]="item.Valor" >
+                {{item.Valor}}
+                </option>
+            </select>
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Rol asociado</label>
+            <select   name="rol"  class="form-control" [(ngModel)]="SearchRol" >
+                  <option *ngFor="let item of rolUser" [value]="item.Valor" >
+                  {{item.Valor}}
+                  </option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Telefono</label>
+              <input type="text" name="tel" class="form-control" [(ngModel)]="SearchTel">
+            </div>
+            <div class="col-md-12">
+              <label for="inputAddress">Correo electronico</label>
+              <input type="text" name="email" class="form-control" [(ngModel)]="SearchEmail">
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-success">Aceptar</button>
+
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-light">Limpiar</button>
+
+            </div>
+            </div>
+          </div>
+      <!--  -->
+    </div>
+     <!-- class="col-md-4" -->
+			<div class="row">
+				<div class="col-md-12">
+          <div>
+            <div class="d-flex justify-content-end bg-light mb-3">
+              <div class="p-2 ">OLSoftware - 2018</div>
+              
+            </div>
+        </div> 
+        </div>
+				</div>
+      </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

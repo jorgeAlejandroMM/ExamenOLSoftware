@@ -1,0 +1,10 @@
+.row > div{
+    background:#ffffff;
+    padding: 30px;
+    border: 1px solid black;
+  }
+  
+  .container-fluid{
+    background: azure;
+    
+  }
