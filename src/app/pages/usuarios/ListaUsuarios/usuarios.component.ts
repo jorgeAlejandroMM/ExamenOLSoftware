@@ -55,9 +55,8 @@ export class UsuariosComponent implements OnInit ,OnDestroy{
   eliminarUsuario(user:any){
 
     this.S_Usuario.eliminarUser(user.IdJSON).subscribe((data:any)=>{
-      console.log(data);   
-    }
-    )
+     data==null?window.location.reload():null;
+    })
   }
 
   editarUsuario(user?:UsuarioModel){
