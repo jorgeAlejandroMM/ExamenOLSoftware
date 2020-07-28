@@ -118,7 +118,7 @@ export class EditarComponent implements OnInit {
       
         this.S_Usuario.ActualizarInformacionUser(this.user).subscribe((data:UsuarioModel)=>{
           if(data.nombre){
-            console.log(data);
+            // console.log(data);
             this.hideModal();
             window.location.reload();
           }
@@ -127,7 +127,7 @@ export class EditarComponent implements OnInit {
        }else if(localStorage.getItem('usuario')==undefined){
 
         this.S_Usuario.crearUser(this.user).subscribe((data:UsuarioModel)=>{
-          console.log(data);
+          // console.log(data);
             this.hideModal();
             window.location.reload();
               
@@ -139,21 +139,21 @@ export class EditarComponent implements OnInit {
   
 
 
-  capturarimagen(e){
+  // capturarimagen(e){
 
-      const  preview:any = document.querySelector('img');
-      let file = e.target.files[0];
-      let reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload =  ()=> {
-        this.user.foto=reader.result as string;
-        preview.src = reader.result;
-      };
-      reader.onerror = function (error) {
-        console.log('Error: ', error);
-      };
+  //     const  preview:any = document.querySelector('img');
+  //     let file = e.target.files[0];
+  //     let reader = new FileReader();
+  //     reader.readAsDataURL(file);
+  //     reader.onload =  ()=> {
+  //       this.user.foto=reader.result as string;
+  //       preview.src = reader.result;
+  //     };
+  //     reader.onerror = function (error) {
+  //       console.log('Error: ', error);
+  //     };
 
-  }
+  // }
 
   ObtenerDataUserStorage(){
 

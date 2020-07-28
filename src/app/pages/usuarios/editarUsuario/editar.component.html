@@ -11,7 +11,7 @@
         <div class="container-fluid">
            
         <form [formGroup]="formGroup" (ngSubmit)="EnviarFormulario()">
-          <div class="row">
+          <div class="form-group row">
           <div class="col-md-6">
 
                   <label for="inputAddress">Nombre</label>
@@ -24,7 +24,7 @@
                   <small *ngIf="ValidarNombre" class="text-danger">Campo obligatorio, min 3 caracteres</small>
          
          </div>
-         <div class="col-md-6">
+         <div class="col-md-6 ">
 
                   <label for="inputAddress">Apellido</label>
                   <input type="text" 

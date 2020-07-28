@@ -6,17 +6,11 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor(public S_Auth:AutenticacionService) {
     console.log(this.S_Auth.usuario);
   
-    
-    
-   }
-
-  ngOnInit(): void {
-   
   }
 
 }
